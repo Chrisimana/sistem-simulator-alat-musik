@@ -9,8 +9,6 @@
 
 **Simulator alat musik canggih dengan GUI modern, audio real, dan visualizer dinamis**
 
-[Fitur](#-fitur) • [Instalasi](#-instalasi) • [Penggunaan](#-penggunaan) • [Dokumentasi](#-dokumentasi) • [Struktur Project](#-struktur-project)
-
 </div>
 
 ## 📋 Daftar Isi
@@ -174,43 +172,6 @@ Aplikasi akan menampilkan welcome message dan membuka GUI utama.
 | `Ctrl + Q` | Keluar aplikasi |
 
 ## 📚 Dokumentasi
-
-### Architecture Overview
-
-```
-Sistem Simulator Alat Musik
-├── Presentation Layer (GUI)
-│   ├── MainFrame - Window utama
-│   ├── MusicPanel - Simulator alat musik
-│   ├── HistoryPanel - Manajemen riwayat
-│   └── VisualizerPanel - Visualisasi audio
-├── Business Logic Layer
-│   ├── AlatMusik (Abstract) - Base class
-│   ├── Concrete Instruments - Implementasi spesifik
-│   └── Feature Managers - Manajer fitur
-├── Data Access Layer
-│   ├── HistoryManager - Kelola riwayat
-│   ├── FileHandler - Operasi file
-│   └── AudioPlayer - Sistem audio
-└── Utilities Layer
-    ├── KategoriAlat (Enum) - Kategorisasi
-    └── Configurations - Pengaturan
-```
-
-### Workflow Simulasi
-
-```mermaid
-graph TD
-    A[User Select Instrument] --> B[MusicPanel]
-    B --> C[Play Button Click]
-    C --> D[AlatMusik.mainkan]
-    D --> E[RealAudioPlayer]
-    E --> F[MIDI Synthesizer]
-    F --> G[Sound Output]
-    D --> H[HistoryManager.addHistory]
-    H --> I[File Serialization]
-    G --> J[Visualizer Update]
-```
 
 ## 🗂️ Struktur Project
 
